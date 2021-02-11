@@ -38,16 +38,19 @@
         <form>
             <div class="section"><span>1</span>Nome e Email</div>
             <div class="inner-wrap">
-                <label>Seu nome <input type="text" name="nome" /></label>
-                <label>Email <input type="email" name="email" /></label>
-                <label>Assunto <textarea name="field2"></textarea></label>
+                <div id="txtNome"></div>
+                <label>Nome* <input type="text" name="nome" id="nome" onkeyup="validaNome()" /></label>
+                
+                <div id="txtEmail"></div>
+                <label>Email* <input type="email" name="email" id="email" onkeyup="validaEmail()"/></label>
+
+                <div id="txtAssunto"></div>
+                <label>Assunto <textarea name="assunto" id="assunto" onkeyup="validaAssunto()"></textarea></label>
 
             </div>
 
-            <div class="button-section">
-                <input type="submit" name="Sign Up" />
-                <span class="privacy-policy">
-                </span>
+            <div>
+                <button onclick="enviar()">Enviar</button>
             </div>
         </form>
     </div>
@@ -58,6 +61,8 @@
         Direitos reservados: André de Brito &copy;
     </footer>
 
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
